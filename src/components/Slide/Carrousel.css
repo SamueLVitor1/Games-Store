@@ -7,15 +7,16 @@
 }
 
 .infoGames {
-  width: 35rem;
+  width: 32rem;
   position: absolute;
   left: 20rem;
+  top: 5rem;
   z-index: 1;
   font-size: 1.7rem;
   display: flex;
   flex-direction: column;
   gap: 3.2rem;
-  animation: infoGames-out-left 28000ms cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  overflow-x: hidden;
 }
 
 @keyframes infoGames-out-left {
@@ -35,7 +36,7 @@
   width: 200px;
 }
 
-.infoGames a {
+.infoGames button {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -51,14 +52,14 @@
   transition: all 0.2s;
 }
 
-.infoGames a:hover{
+.infoGames button:hover{
   filter: brightness(0.7);
   transform: scale(1.02);
 }
 
 .slide {
   border-radius: 0.5rem;
-  width: 100vw;
+  width: 100%;
   height: 100%;
   animation: fade-in-left 10000ms cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
   animation: fade-out-left 10000ms cubic-bezier(0.250, 0.460, 0.450, 0.940) both;

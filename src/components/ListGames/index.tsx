@@ -1,23 +1,21 @@
-import { useState } from "react";
+import { useContext } from "react";
 import { gamesStore } from "../../data/gamesStore";
 import { ListContainer } from "./styles";
 import { ModalGame } from "../Modal";
+import { ModalContext } from "../../context/ModalContext";
 
 interface ListGamesInterface {
   isCategory: string;
 }
 
 export function ListGames({ isCategory }: ListGamesInterface) {
-  const [isModalOpen, setModalOpen] = useState(false);
-  const [gameDate, setGamesDate] = useState({});
-
-  function handleOpenModal() {
-    setModalOpen(true);
-  }
-
-  function handleCloseModal() {
-    setModalOpen(false);
-  }
+  const {
+    isModalOpen,
+    gameDate,
+    handleCloseModal,
+    handleOpenModal,
+    setGamesDate,
+  } = useContext(ModalContext);
 
   return (
     <>
