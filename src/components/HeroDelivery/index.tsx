@@ -5,11 +5,11 @@ import { CurrencyDollarSimple, MapPin, Timer } from "@phosphor-icons/react";
 export function HeroDelivery() {
   return (
     <DeliveyContainer>
-      
+
       <section>
         <header>
           <h2>Uhu! Pedido confirmado</h2>
-          <p>Agora é só aguardar que logo o café chegará até você</p>
+          <p>Agora é só aguardar que logo o pedido chegará até você 😉🎮</p>
         </header>
 
         <main>
