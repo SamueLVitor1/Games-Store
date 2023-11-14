@@ -1,6 +1,7 @@
 import { ContainerHeader } from "./styles";
 import logoSteam from "../../assents/steam-logo.svg";
 import profileIcon from "../../assents/logos/profileIcon.jpg";
+import { ShoppingCart } from "@phosphor-icons/react";
 
 export function Header() {
   return (
@@ -10,9 +11,13 @@ export function Header() {
       </section>
 
       <section>
-        <a href="">carrinho</a>
+        <div className="button-carrinho">
+          <ShoppingCart size={24} color="#fff" />
+        </div>
 
-        <img src={profileIcon} alt="icon profile" width={40} />
+        <div className="iconProfile">
+          <img src={profileIcon} alt="icon profile"  />
+        </div>
       </section>
     </ContainerHeader>
   );

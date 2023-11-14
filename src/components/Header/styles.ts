@@ -12,7 +12,7 @@ export const ContainerHeader = styled.header`
   section{
     display: flex;
     align-items: center;
-    gap: 3.9rem;
+    gap: 3rem;
   }
 
   section:first-child{
@@ -35,22 +35,46 @@ export const ContainerHeader = styled.header`
   }
 
   section:last-child{
-    img{
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-
-      width: 5rem;
-      height: 5rem;
-      border-radius: 50%;
+    .button-carrinho{
+      width: 40px;
+      height: 40px;
+      border-radius: 999px;
+      position: relative;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 3rem;
-      color: var(--white);
+      background: rgba(0, 148, 255, 0.24);
       cursor: pointer;
       transition: all 0.3s;
-      position: relative;
+
+      &::before{
+        content: "";
+        position: absolute;
+        top: 0;
+        right: -0.1rem;
+        width: 1rem;
+        height: 1rem;
+        border-radius: 50%;
+        background: #0094FF;
+        transition: all 0.3s;
       }
+
+      &:hover::before{
+        width: 0;
+        height: 0;
+      }
+    }
+
+
+    .iconProfile{
+      width: 40px;
+      height: 40px;
+      position: relative;
+      transition: all 0.3s;
+      img{
+        width: 100%;
+        border-radius: 50%;
+      }
+    }
     }   
 `
