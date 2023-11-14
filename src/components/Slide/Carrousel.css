@@ -50,6 +50,7 @@
   font-weight: 300;
   color: #fff;
   transition: all 0.2s;
+  cursor: pointer;
 }
 
 .infoGames button:hover{

@@ -33,12 +33,14 @@ export const Container = styled.div`
   header{
     display: flex;
     flex-direction: column;
+    align-items: center;
+    
     gap: 6px;
     margin-bottom: 2rem;
 
     h2{
+      text-align: center;
       font-size: 3rem;
-      text-align: left;
       font-weight: 600;
     }
 
@@ -54,12 +56,14 @@ export const Container = styled.div`
 
   main p{
     font-size: 1.6rem;
+    text-align: justify;
     margin-bottom: 3.9rem;
     opacity: 0.9;
   }
 
   footer{
     display: flex;
+    align-items: center;
     flex-direction: column;
     gap: 14px;
 
@@ -82,7 +86,7 @@ export const Container = styled.div`
   cursor: pointer;
   border: 0;
   background: transparent;
-  align-self: flex-start;
+  align-self: center;
 }
 
 .svg-wrapper:hover #shape {
