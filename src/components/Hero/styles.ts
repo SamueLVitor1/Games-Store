@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import search from "../../assents/search.svg"
 
 export const HeroContainer = styled.div`
   margin: 0 auto;
@@ -48,5 +49,19 @@ export const HeroContainer = styled.div`
     margin-top: 4rem;
   }
 
+  input[type="search"]{
+    margin-top: 4rem;
+    height: 5rem;
+  
+    width: 100%;
+    border-radius: 6px;
+    background: ${props => props.theme["dark-20"]};
+    border: none;
+
+    background-image: url(${search});
+    background-repeat: no-repeat;
+    background-position: right 30px center ;
+    padding: 2rem;
+  }
 `
 

@@ -4,6 +4,8 @@ import "./Carrousel.css";
 import { ModalContext } from "../../context/ModalContext";
 import { ModalGame } from "../Modal";
 
+
+
 export const Slide = () => {
 
   const {

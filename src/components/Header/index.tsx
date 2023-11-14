@@ -4,6 +4,8 @@ import profileIcon from "../../assents/logos/profileIcon.jpg";
 import { ShoppingCart } from "@phosphor-icons/react";
 import { Link } from "react-router-dom";
 
+
+
 export function Header() {
   return (
     <ContainerHeader>

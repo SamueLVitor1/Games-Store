@@ -1,4 +1,5 @@
 import ReactModal from "react-modal";
+import Modal from "react-modal";
 import { Container } from "./styles";
 import { X } from "@phosphor-icons/react";
 
@@ -7,6 +8,8 @@ interface ModalGameProps {
   handleCloseModal: () => void;
   gameDados: any;
 }
+
+Modal.setAppElement('#root');
 
 export function ModalGame({
   isOpen,
@@ -53,7 +56,7 @@ export function ModalGame({
                 <text
                   x="50%"
                   y="50%"
-                  text-anchor="middle"
+                  textAnchor="middle"
                   fill="white"
                   dy=".3em"
                 >
