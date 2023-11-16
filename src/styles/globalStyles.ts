@@ -1,4 +1,4 @@
-import  { createGlobalStyle } from "styled-components";
+import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyles = createGlobalStyle`
   *{
@@ -9,6 +9,11 @@ export const GlobalStyles = createGlobalStyle`
 
   :root{
     font-size: 62.5%;
+  }
+
+  :focus{ 
+  outline: transparent;
+  box-shadow: 0 0 0 3px #00875f;
   }
 
   li{
@@ -22,6 +27,8 @@ export const GlobalStyles = createGlobalStyle`
     -webkit-font-smoothing: antialiased;
     color: ${props => props.theme.white};
   }
+
+  
 
   a{
     color: ${props => props.theme.white};

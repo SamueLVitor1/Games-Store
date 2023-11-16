@@ -1,11 +1,10 @@
-import { DeliveyContainer } from "./styles";
+import { DeliveyContainer, IconPD } from "./styles";
 import imgDelivery from "../../assents/logos/delivery.png";
 import { CurrencyDollarSimple, MapPin, Timer } from "@phosphor-icons/react";
 
 export function HeroDelivery() {
   return (
     <DeliveyContainer>
-
       <section>
         <header>
           <h2>Uhu! Pedido confirmado</h2>
@@ -14,7 +13,9 @@ export function HeroDelivery() {
 
         <main>
           <div>
-            <MapPin width={30} color="#fff" weight="fill" />
+            <IconPD iconName="MapPin">
+              <MapPin width={16} color="#fff" weight="fill" />
+            </IconPD>
             <p>
               Entrega em <span> Rua João Daniel Martinelli, 102 </span> Farrapos
               - Porto Alegre, RS
@@ -22,14 +23,20 @@ export function HeroDelivery() {
           </div>
 
           <div>
-            <Timer width={30} color="#fff" weight="fill" />
+            <IconPD iconName="Timer">
+              <Timer width={16} color="#fff" weight="fill" />
+            </IconPD>
             <p>Previsão de entrega 20 min - 30 min</p>
           </div>
 
           <div>
-            <CurrencyDollarSimple width={30} color="#fff" weight="regular" />
-            Pagamento na entrega
-            <span> Cartão de Crédito</span>
+            <IconPD iconName="CurrencyDollarSimple">
+              <CurrencyDollarSimple width={16} color="#fff" weight="regular" />
+            </IconPD>
+            <p>
+              Pagamento na entrega:
+              <span> Cartão de Crédito</span>
+            </p>
           </div>
         </main>
       </section>
