@@ -26,7 +26,9 @@ export function HeroDelivery() {
             <IconPD iconName="Timer">
               <Timer width={16} color="#fff" weight="fill" />
             </IconPD>
-            <p>Previsão de entrega 20 min - 30 min</p>
+            <p>
+              Previsão de entrega <span> 20 min - 30 min </span>
+            </p>
           </div>
 
           <div>
