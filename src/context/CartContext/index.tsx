@@ -9,7 +9,7 @@ interface Cart {}
 
 interface ItemCart {
   title: string;
-  logo: string;
+  img: string;
   id: number;
   price?: 100;
   quantity: number;
@@ -48,7 +48,7 @@ export function CartContextProvider({ children }: CartContextProviderProps) {
         ...cartGames,
         {
           title: GameItem.title,
-          logo: GameItem.logo,
+          img: GameItem.img,
           id: GameItem.id,
           price: 100,
           quantity: 1,

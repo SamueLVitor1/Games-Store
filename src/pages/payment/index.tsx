@@ -1,10 +1,7 @@
-import { CartContext } from "../../context/CartContext";
+import { ListCartItens } from "../../components/ListCartItens";
 import { PaymentContainer } from "./styles";
-import { useContext} from 'react'
 
 export function Payment() {
-
-  const {cartGames} =  useContext(CartContext);
 
   return (
     <PaymentContainer>
@@ -16,13 +13,7 @@ export function Payment() {
         <h2>Jogos selecionados</h2>
 
         <main>
-          <ul>
-            {cartGames.length >= 0 ? 
-              <p>Nenhum Jogo Escolhido</p> :   
-              null
-            }
-            
-          </ul>
+          <ListCartItens/>
         </main>
       </section>
     </PaymentContainer>

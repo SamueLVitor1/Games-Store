@@ -54,7 +54,13 @@ export function ModalGame({
           <footer>
             <h3>R$100,00</h3>
 
-            <button className="svg-wrapper">
+            <button
+              className="svg-wrapper"
+              onClick={() => {
+                handleAddGame(gameDados);
+                console.log(gameDados)
+              }}
+            >
               <svg height="40" width="150" xmlns="http://www.w3.org/2000/svg">
                 <rect id="shape" height="40" width="150" />
                 <text
@@ -63,9 +69,6 @@ export function ModalGame({
                   textAnchor="middle"
                   fill="white"
                   dy=".3em"
-                  onClick={() => {
-                    handleAddGame(gameDados);
-                  }}
                 >
                   ADICIONAR NO CARRINHO
                 </text>

@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 interface ContainerHeader {
-  cartItemCount: number
+  cartItemCount?: number
 }
 
 export const ContainerHeader = styled.header<ContainerHeader>`
@@ -51,23 +51,23 @@ export const ContainerHeader = styled.header<ContainerHeader>`
       transition: all 0.3s;
 
       ${({ cartItemCount }) => cartItemCount !== 0 && `
-        &::before {
-          content: "";
-          position: absolute;
-          top: 0;
-          right: -0.1rem;
-          width: 1rem;
-          height: 1rem;
-          border-radius: 50%;
-          background: #0094FF;
-          transition: all 0.3s;
-        }
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: -0.1rem;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    background: #0094FF;
+    transition: all 0.3s;
+  }
 
-        &:hover::before {
-          width: 0;
-          height: 0;
-        }
-      `}
+  &:hover::before {
+    width: 0;
+    height: 0;
+  }
+`}
     }
 
       
