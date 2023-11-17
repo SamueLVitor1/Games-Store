@@ -18,9 +18,11 @@ export function Header() {
       </section>
 
       <section>
-        <div className="button-carrinho">
-          <ShoppingCart size={24} color="#fff" />
-        </div>
+        <Link to="/payment">
+          <div className="button-carrinho">
+            <ShoppingCart size={24} color="#fff" />
+          </div>
+        </Link>
 
         <div className="iconProfile">
           <img src={profileIcon} alt="icon profile" />

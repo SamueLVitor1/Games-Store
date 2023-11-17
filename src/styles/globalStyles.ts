@@ -13,7 +13,6 @@ export const GlobalStyles = createGlobalStyle`
 
   :focus{ 
   outline: transparent;
-  box-shadow: 0 0 0 3px #00875f;
   }
 
   li{
