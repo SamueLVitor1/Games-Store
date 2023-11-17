@@ -1,5 +1,9 @@
 import styled from "styled-components";
+import { useContext } from "react";
+import { CartContext } from "../../context/CartContext";
 
+
+const {cartGames} = useContext(CartContext)
 
 export const ContainerHeader = styled.header`
   background: ${props => props.theme["dark-20"]};

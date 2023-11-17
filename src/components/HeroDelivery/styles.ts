@@ -8,6 +8,10 @@ export const DeliveyContainer = styled.div`
   margin: 8rem 10rem;
   display: flex;
   gap: 10rem;
+
+  img{
+    margin-bottom: -7rem;
+  }
   
 
   section{

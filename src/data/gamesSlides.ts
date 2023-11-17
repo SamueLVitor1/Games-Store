@@ -19,27 +19,31 @@ export const gamesSlides = [
     "src": redDead,
     "alt": "Image 1 for carousel",
     "logo": rdr2LOGO,
-    imgFull: rdrFull
+    imgFull: rdrFull,
+    id: 10
   },
   {
     "title": "Elden Ring",
     "src": eldenRing,
     "alt": "Image 2 for carousel",
     "logo": eldenLOGO,
-    imgFull: eldenFull
+    imgFull: eldenFull,
+    id: 1
   },
   {
     "title": "Minecraft",
     "src": minecraft,
     "alt": "Image 3 for carousel",
     "logo": mineLOGO,
-    imgFull: minecraftFull
+    imgFull: minecraftFull,
+    id: 7
   },
   {
     "title": "Call of Duty MW2",
     "src": codMW2,
     "alt": "Image 3 for carousel",
     "logo": mw2LOGO,
-    imgFull: codFull
+    imgFull: codFull,
+    id: 2
   }
 ]

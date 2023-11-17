@@ -5,7 +5,6 @@ import { ModalContext } from "../../context/ModalContext";
 import { ModalGame } from "../Modal";
 
 
-
 export const Slide = () => {
 
   const {
@@ -59,7 +58,7 @@ export const Slide = () => {
 
                 <button onClick={()=>{
                   setGamesDate(item)
-                  handleOpenModal();                  
+                  handleOpenModal();              
                 }}>compre agora</button>
               </div>
             </div>

@@ -2,6 +2,8 @@ import ReactModal from "react-modal";
 import Modal from "react-modal";
 import { Container } from "./styles";
 import { X } from "@phosphor-icons/react";
+import { useContext } from "react";
+import { CartContext } from "../../context/CartContext";
 
 interface ModalGameProps {
   isOpen: boolean;
@@ -9,13 +11,15 @@ interface ModalGameProps {
   gameDados: any;
 }
 
-Modal.setAppElement('#root');
+Modal.setAppElement("#root");
 
 export function ModalGame({
   isOpen,
   handleCloseModal,
   gameDados,
 }: ModalGameProps) {
+  const { handleAddGame } = useContext(CartContext);
+
   return (
     <ReactModal
       isOpen={isOpen}
@@ -59,6 +63,9 @@ export function ModalGame({
                   textAnchor="middle"
                   fill="white"
                   dy=".3em"
+                  onClick={() => {
+                    handleAddGame(gameDados);
+                  }}
                 >
                   ADICIONAR NO CARRINHO
                 </text>
