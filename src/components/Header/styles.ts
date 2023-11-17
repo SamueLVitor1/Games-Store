@@ -1,11 +1,10 @@
 import styled from "styled-components";
-import { useContext } from "react";
-import { CartContext } from "../../context/CartContext";
 
+interface ContainerHeader {
+  cartItemCount: number
+}
 
-const {cartGames} = useContext(CartContext)
-
-export const ContainerHeader = styled.header`
+export const ContainerHeader = styled.header<ContainerHeader>`
   background: ${props => props.theme["dark-20"]};
   height: 8rem;
   padding:  4rem;
@@ -51,22 +50,27 @@ export const ContainerHeader = styled.header`
       cursor: pointer;
       transition: all 0.3s;
 
-      &::before{
-        content: "";
-        position: absolute;
-        top: 0;
-        right: -0.1rem;
-        width: 1rem;
-        height: 1rem;
-        border-radius: 50%;
-        background: #0094FF;
-        transition: all 0.3s;
-      }
+      ${({ cartItemCount }) => cartItemCount !== 0 && `
+        &::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          right: -0.1rem;
+          width: 1rem;
+          height: 1rem;
+          border-radius: 50%;
+          background: #0094FF;
+          transition: all 0.3s;
+        }
 
-      &:hover::before{
-        width: 0;
-        height: 0;
-      }
+        &:hover::before {
+          width: 0;
+          height: 0;
+        }
+      `}
+    }
+
+      
     }
 
 
@@ -79,6 +83,5 @@ export const ContainerHeader = styled.header`
         width: 100%;
         border-radius: 50%;
       }
-    }
     }   
 `
