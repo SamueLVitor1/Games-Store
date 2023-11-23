@@ -5,12 +5,6 @@ import { useState } from "react";
 
 export function Hero() {
   const [categorySelected, setCategorySelected] = useState("popular");
-  const [searchGame, setSearchGame] = useState("");
-
-  function handleSearchGame(textSearch: string) {
-    setSearchGame(textSearch);
-  }
-  console.log(searchGame);
 
   return (
     <HeroContainer>
@@ -40,12 +34,6 @@ export function Hero() {
           </Select>
         </div>
       </section>
-
-      <input
-        value={searchGame}
-        type="search"
-        onChange={(e) => handleSearchGame(e.target.value)}
-      />
 
       <ListGames isCategory={categorySelected} />
     </HeroContainer>

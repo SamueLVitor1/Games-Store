@@ -19,7 +19,7 @@ export const PaymentContainer = styled.div`
    }
 
    main{
-    padding: 4rem;
+    padding: 2.8rem;
     background-color: ${props => props.theme["dark-20"]};
     border-radius: 6px 44px;
     

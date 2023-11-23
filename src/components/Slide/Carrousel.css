@@ -3,7 +3,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 400px;
+  height: 380px;
 }
 
 .infoGames {
@@ -33,7 +33,7 @@
 }
 
 .infoGames img{
-  width: 200px;
+  width: 150px;
 }
 
 .infoGames button {
@@ -55,7 +55,6 @@
 
 .infoGames button:hover{
   filter: brightness(0.7);
-  transform: scale(1.02);
 }
 
 .slide {
