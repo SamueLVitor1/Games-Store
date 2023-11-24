@@ -10,7 +10,7 @@ export function Header() {
   const { cartGames } = useContext(CartContext);
 
   return (
-    <ContainerHeader cartItemCount={cartGames.length}>
+    <ContainerHeader cartitemcount={cartGames.length}>
       <section>
         <Link to={"/"}>
           <img src={logoSteam} alt="" />

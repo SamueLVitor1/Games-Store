@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 interface ContainerHeader {
-  cartItemCount?: number
+  cartitemcount?: number
 }
 
 export const ContainerHeader = styled.header<ContainerHeader>`
@@ -50,7 +50,7 @@ export const ContainerHeader = styled.header<ContainerHeader>`
       cursor: pointer;
       transition: all 0.3s;
 
-      ${({ cartItemCount }) => cartItemCount !== 0 && `
+      ${({ cartitemcount }) => cartitemcount !== 0 && `
   &::before {
     content: "";
     position: absolute;

@@ -3,9 +3,9 @@ import { ReactNode, createContext, useState } from "react";
 interface CartContextType {
   handleAddGame: (GameItem: ItemCart) => void;
   cartGames: ItemCart[],
+  decrementQuantify: (gameName: string) => void;
+  incrementQuantify: (gameName: string) => void;
 }
-
-interface Cart {}
 
 interface ItemCart {
   title: string;
@@ -62,7 +62,20 @@ export function CartContextProvider({ children }: CartContextProviderProps) {
       if (item.title === gameName && item.quantity > 1) {
         return {
           ...item,
-          quantityCoffee: item.quantity - 1,
+          quantity: item.quantity - 1,
+        };
+      }
+      return item;
+    });
+    setCartGames(newList);
+  }
+
+  function incrementQuantify(gameName: string) {
+    const newList = cartGames.map((item) => {
+      if (item.title === gameName) {
+        return {
+          ...item,
+          quantity: item.quantity + 1,
         };
       }
       return item;
@@ -76,6 +89,8 @@ export function CartContextProvider({ children }: CartContextProviderProps) {
   <CartContext.Provider value={{
     handleAddGame,
     cartGames,
+    incrementQuantify,
+    decrementQuantify,
   }}>
     {children}
     </CartContext.Provider>)

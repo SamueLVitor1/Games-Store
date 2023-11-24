@@ -19,7 +19,6 @@ export const ListContainer = styled.ul`
     align-items: center;
     justify-content: center;
     
-
     header{
       display: flex;
       align-items: center;
@@ -40,15 +39,41 @@ export const ListContainer = styled.ul`
   }
 
   main{
- 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
     
+    span{
+      margin-top: -6px;
+    }
 
+    button{
+      background: transparent;
+      border: 0;
+      cursor: pointer;
 
+      &:hover{
+        filter: brightness(0.8);
+      }
+      
+      svg{
+        color: ${props => props.theme["$support-02"]};
+      }
+    }
   }
 
+ 
   img{
     width: 100px;
     border-radius: 4px;
   }
+ }
+
+ footer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
  }
 `

@@ -4,7 +4,7 @@ import { ListContainer } from "./styles";
 import { Minus, Plus } from "@phosphor-icons/react";
 
 export function ListCartItens() {
-  const { cartGames } = useContext(CartContext);
+  const { cartGames, decrementQuantify, incrementQuantify } = useContext(CartContext);
   const inicialValue: number = 0;
   return (
     <ListContainer>
@@ -23,24 +23,21 @@ export function ListCartItens() {
               </header>
 
               <main>
-                <div>
-                  <button>
-                    <Minus size={24} color="#c47f17" />
-                  </button>
-                  {game.quantity}
-                  <button>
-                    <Plus size={24} color="#c47f17" />
-                  </button>
-                </div>
+                <button onClick={()=> decrementQuantify(game.title)}>
+                  <Minus size={20} />
+                </button>
+                <span>{game.quantity}</span>
+                <button onClick={()=> incrementQuantify(game.title)}>
+                  <Plus size={20} />
+                </button>
               </main>
-              
             </div>
           </li>
         );
       })}
 
-      <p>
-        <p>Total</p>
+      <footer>
+        <p>Total:</p>
         <span>
           R$&nbsp;
           {cartGames
@@ -49,7 +46,7 @@ export function ListCartItens() {
             }, inicialValue)
             .toFixed(2)}
         </span>
-      </p>
+      </footer>
     </ListContainer>
   );
 }
