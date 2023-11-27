@@ -4,12 +4,14 @@ import { ListContainer } from "./styles";
 import { Minus, Plus } from "@phosphor-icons/react";
 
 export function ListCartItens() {
-  const { cartGames, decrementQuantify, incrementQuantify } = useContext(CartContext);
+  const { cartGames, decrementQuantify, incrementQuantify, deleteItemCart } =
+    useContext(CartContext);
   const inicialValue: number = 0;
+  
   return (
     <ListContainer>
       {cartGames.length === 0 && (
-        <p style={{ opacity: 0.89 }}>Nenhum Jogo Escolhido</p>
+        <p style={{ opacity: 0.89, margin: "0 auto" }}>Nenhum Jogo Escolhido</p>
       )}
       {cartGames.map((game) => {
         return (
@@ -23,11 +25,18 @@ export function ListCartItens() {
               </header>
 
               <main>
-                <button onClick={()=> decrementQuantify(game.title)}>
+                <button
+                  onClick={() => {
+                    decrementQuantify(game.title);
+                    if (game.quantity === 1) {
+                      deleteItemCart(game.title);
+                    }
+                  }}
+                >
                   <Minus size={20} />
                 </button>
                 <span>{game.quantity}</span>
-                <button onClick={()=> incrementQuantify(game.title)}>
+                <button onClick={() => incrementQuantify(game.title)}>
                   <Plus size={20} />
                 </button>
               </main>
@@ -37,15 +46,19 @@ export function ListCartItens() {
       })}
 
       <footer>
-        <p>Total:</p>
-        <span>
-          R$&nbsp;
-          {cartGames
-            .reduce((acc, item) => {
-              return 3.5 + (acc + 100 * item.quantity);
-            }, inicialValue)
-            .toFixed(2)}
-        </span>
+        <p>Taxa de entrega: R$12,00</p>
+
+        <div>
+          <p>Total:</p>
+          <span>
+            R$&nbsp;
+            {cartGames
+              .reduce((acc, item) => {
+                return 12 + (acc + 100 * item.quantity);
+              }, inicialValue)
+              .toFixed(2)}
+          </span>
+        </div>
       </footer>
     </ListContainer>
   );

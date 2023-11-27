@@ -73,7 +73,12 @@ export const ListContainer = styled.ul`
  footer{
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   gap: 1rem;
+
+  div{
+    display: flex;
+    gap: 4px;
+  }
  }
 `

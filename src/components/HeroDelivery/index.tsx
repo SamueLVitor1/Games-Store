@@ -1,8 +1,12 @@
 import { DeliveyContainer, IconPD } from "./styles";
 import imgDelivery from "../../assents/logos/delivery.png";
 import { CurrencyDollarSimple, MapPin, Timer } from "@phosphor-icons/react";
+import { useContext } from "react";
+import { CartContext } from "../../context/CartContext";
 
 export function HeroDelivery() {
+  const { paymentInfos } = useContext(CartContext);
+
   return (
     <DeliveyContainer>
       <section>
@@ -17,8 +21,12 @@ export function HeroDelivery() {
               <MapPin width={16} color="#fff" weight="fill" />
             </IconPD>
             <p>
-              Entrega em <span> Rua João Daniel Martinelli, 102 </span> Farrapos
-              - Porto Alegre, RS
+              Entrega em{" "}
+              <span>
+                Rua {paymentInfos.street}, {paymentInfos.number}{" "}
+              </span>{" "}
+              {paymentInfos.neighborhood} - {paymentInfos.city},{" "}
+              {paymentInfos.uf}
             </p>
           </div>
 
@@ -37,7 +45,13 @@ export function HeroDelivery() {
             </IconPD>
             <p>
               Pagamento na entrega:
-              <span> Cartão de Crédito</span>
+              {paymentInfos.typePayment === "money" && <span> Dinheiro </span>}
+              {paymentInfos.typePayment === "creditCard" && (
+                <span> Cartão de crédito </span>
+              )}
+              {paymentInfos.typePayment === "debitCard" && (
+                <span> Cartão de Débito </span>
+              )}
             </p>
           </div>
         </main>
