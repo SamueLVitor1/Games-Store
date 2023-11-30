@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 interface IconProps {
-  iconName: string;
+  iconname: string;
 }
 
 export const DeliveyContainer = styled.div`
@@ -83,8 +83,8 @@ export const IconPD = styled.div<IconProps>`
   gap: 8px;
   border-radius: 1000px;
   background: ${props => 
-  props.iconName === 'MapPin' && '#8047F8'  ||
-  props.iconName === 'Timer' && '#DBAC2C' ||
-  props.iconName === 'CurrencyDollarSimple' && '#C47F17' 
+  props.iconname === 'MapPin' && '#8047F8'  ||
+  props.iconname === 'Timer' && '#DBAC2C' ||
+  props.iconname === 'CurrencyDollarSimple' && '#C47F17' 
 } ;
 `

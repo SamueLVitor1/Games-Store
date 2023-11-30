@@ -4,7 +4,9 @@ import search from "../../assents/search.svg"
 export const HeroContainer = styled.div`
   margin: 0 auto;
   margin-top: 8rem;
-  width: 121rem;
+  width: 100%;
+  max-width: 121rem;
+  padding: 1rem;
 
   section{
     background: ${props => props.theme["dark-20"]};

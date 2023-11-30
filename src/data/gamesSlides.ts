@@ -1,4 +1,4 @@
-import redDead from '../assents/games-Img/red-dead.svg'
+import redDead from '../assents/games-Img/red-dead.jpg'
 import eldenRing from '../assents/games-Img/elden-ring.png'
 import minecraft from '../assents/games-Img/minecraft.jpg'
 import codMW2 from '../assents/games-Img/cod-mw2.jpg'

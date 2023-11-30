@@ -7,15 +7,16 @@ interface ContainerHeader {
 export const ContainerHeader = styled.header<ContainerHeader>`
   background: ${props => props.theme["dark-20"]};
   height: 8rem;
-  padding:  4rem;
+  padding:  3rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  width: 100%;
 
   section{
     display: flex;
     align-items: center;
-    gap: 3rem;
+    gap: 2rem;
   }
 
   section:first-child{

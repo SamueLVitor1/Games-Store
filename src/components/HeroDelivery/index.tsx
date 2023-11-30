@@ -17,7 +17,7 @@ export function HeroDelivery() {
 
         <main>
           <div>
-            <IconPD iconName="MapPin">
+            <IconPD iconname="MapPin">
               <MapPin width={16} color="#fff" weight="fill" />
             </IconPD>
             <p>
@@ -31,7 +31,7 @@ export function HeroDelivery() {
           </div>
 
           <div>
-            <IconPD iconName="Timer">
+            <IconPD iconname="Timer">
               <Timer width={16} color="#fff" weight="fill" />
             </IconPD>
             <p>
@@ -40,7 +40,7 @@ export function HeroDelivery() {
           </div>
 
           <div>
-            <IconPD iconName="CurrencyDollarSimple">
+            <IconPD iconname="CurrencyDollarSimple">
               <CurrencyDollarSimple width={16} color="#fff" weight="regular" />
             </IconPD>
             <p>

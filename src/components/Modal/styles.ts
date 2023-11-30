@@ -9,6 +9,12 @@ export const Container = styled.div`
   padding: 2rem;
   position: relative;
 
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    gap: 1rem; 
+    padding: 1rem; 
+  }
+
   .closeButton{
     position: absolute;
     top: 6px;
@@ -24,10 +30,17 @@ export const Container = styled.div`
   }
 
   img{
-    width: 40rem;
+    max-width: 40rem;
     height:  225px;
     border-radius: 6px;
     object-fit: cover;
+    width: 100%;
+    height: auto;
+
+    @media screen and (max-width: 768px) {
+      width: 100%;
+      height: auto;
+    }
   }
 
   header{
@@ -38,10 +51,18 @@ export const Container = styled.div`
     gap: 6px;
     margin-bottom: 2rem;
 
+    @media screen and (max-width: 768px) {
+      margin-bottom: 1rem; 
+    }
+
     h2{
       text-align: center;
       font-size: 3rem;
       font-weight: 600;
+
+    @media screen and (max-width: 768px) {
+      font-size: 2.8rem;
+    }
     }
 
     span{
@@ -51,6 +72,11 @@ export const Container = styled.div`
       background: #1E1E1E;
       opacity: 0.8;
       font-size: 1.2rem;
+
+      @media screen and (max-width: 768px) {
+        padding: 0.3rem;
+        font-size: 1rem;
+      }
     }
   }
 
@@ -59,6 +85,10 @@ export const Container = styled.div`
     text-align: justify;
     margin-bottom: 3.9rem;
     opacity: 0.9;
+
+    @media screen and (max-width: 768px) {
+       font-size: 1.3rem;
+    }
   }
 
   footer{
