@@ -1,5 +1,10 @@
 import { Bank, CreditCard, MapPinLine, Money } from "@phosphor-icons/react";
-import { Container, FotterFormContainer, TransactionType, TransactionTypeButton } from "./styles";
+import {
+  Container,
+  FotterFormContainer,
+  TransactionType,
+  TransactionTypeButton,
+} from "./styles";
 import { Controller, useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
@@ -36,11 +41,11 @@ export function FormPayment() {
   });
 
   function handleCreateNewPayment(data: newPaymentFormInputs) {
-    if(cartGames.length === 0){
+    if (cartGames.length === 0) {
       reset();
-      return window.alert("Nenhum jogo no carrinho")
+      return window.alert("Nenhum jogo no carrinho");
     }
-    
+
     handleAddPaymentInfo(data);
     navigate("/delivery");
     reset();
@@ -57,61 +62,71 @@ export function FormPayment() {
       </header>
 
       <form onSubmit={handleSubmit(handleCreateNewPayment)}>
-        <input type="text" placeholder="CEP" required {...register("cep")} />
-        <input type="text" placeholder="Rua" required {...register("street")} />
-        <input
-          type="number"
-          placeholder="Número"
-          required
-          {...register("number", { valueAsNumber: true })}
-        />
-        <input
-          type="text"
-          placeholder="Complemento (Opcional)"
-          {...register("complement")}
-        />
-        <input
-          type="text"
-          placeholder="Bairro"
-          required
-          {...register("neighborhood")}
-        />
-        <input
-          type="text"
-          placeholder="Cidade"
-          required
-          {...register("city")}
-        />
-        <input type="text" placeholder="UF" required {...register("uf")} />
-
-        <h2>Formas de pagamento</h2>
+        <div className="divWithInput">
+          <input type="text" placeholder="CEP" required {...register("cep")} />
+          <input
+            type="text"
+            placeholder="Rua"
+            required
+            {...register("street")}
+          />
+          <input
+            type="number"
+            placeholder="Número"
+            required
+            {...register("number", { valueAsNumber: true })}
+          />
+          <input
+            type="text"
+            placeholder="Complemento (Opcional)"
+            {...register("complement")}
+          />
+          <input
+            type="text"
+            placeholder="Bairro"
+            required
+            {...register("neighborhood")}
+          />
+          <input
+            type="text"
+            placeholder="Cidade"
+            required
+            {...register("city")}
+          />
+          <input type="text" placeholder="UF" required {...register("uf")} />
+        </div>
+        <div className="methodsPaymeny">
+          <h2 style={{ display: "block" }}>Formas de pagamento</h2>
+        </div>
         <Controller
           control={control}
           name="typePayment"
           render={({ field }) => {
             return (
-              <TransactionType
-                onValueChange={field.onChange}
-                value={field.value}
-              >
-                <TransactionTypeButton value="creditCard">
-                  <CreditCard size={18} />
-                  Cartão de crédito
-                </TransactionTypeButton>
-                <TransactionTypeButton value="debitCard">
-                  <Bank size={18} />
-                  Cartao de débito
-                </TransactionTypeButton>
-                <TransactionTypeButton value="money">
-                  <Money size={18} />
-                  Dinheiro
-                </TransactionTypeButton>
-              </TransactionType>
+              <>
+                <TransactionType
+                  onValueChange={field.onChange}
+                  value={field.value}
+                >
+                  <TransactionTypeButton value="creditCard">
+                    <CreditCard size={18} />
+                    Cartão de crédito
+                  </TransactionTypeButton>
+                  <TransactionTypeButton value="debitCard">
+                    <Bank size={18} />
+                    Cartao de débito
+                  </TransactionTypeButton>
+                  <TransactionTypeButton value="money">
+                    <Money size={18} />
+                    Dinheiro
+                  </TransactionTypeButton>
+                </TransactionType>
+              </>
             );
           }}
         />
 
-        <FotterFormContainer> 
+        <FotterFormContainer>
           <div>
             <p>Total: </p>
             <span>

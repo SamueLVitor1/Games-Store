@@ -1,11 +1,26 @@
 import styled from "styled-components";
 
 export const PaymentContainer = styled.div`
-  padding:  4rem;
+  padding:  2rem;
   display: grid;
-  grid-template-columns: 1fr 44.8rem;
+  grid-template-columns: 1fr;
   column-gap: 3.2rem;
 
+  
+    @media screen and (max-width: 450px) {
+    padding: 1rem;
+  }
+
+  @media screen and (min-width: 768px) {
+    grid-template-columns: 1fr 44.8rem; 
+    column-gap: 3.2rem;
+  }
+
+  section:first-child{
+    @media screen and (max-width: 450px) {
+    width: 300px;
+  }
+  }
 
   section:last-child{
    display: flex;
