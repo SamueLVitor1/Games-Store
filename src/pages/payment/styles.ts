@@ -2,13 +2,14 @@ import styled from "styled-components";
 
 export const PaymentContainer = styled.div`
   padding:  2rem;
-  display: grid;
-  grid-template-columns: 1fr;
+  display: flex;
+  gap: 2rem;
   column-gap: 3.2rem;
 
   
     @media screen and (max-width: 450px) {
     padding: 1rem;
+    flex-direction: column-reverse;
   }
 
   @media screen and (min-width: 768px) {
@@ -17,9 +18,18 @@ export const PaymentContainer = styled.div`
   }
 
   section:first-child{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     @media screen and (max-width: 450px) {
-    width: 300px;
-  }
+    width: 100%;
+    max-width: 40rem;
+    }
+
+    @media screen and (max-width: 400px) {
+    width: 100%;
+    max-width: 35rem;
+    }
   }
 
   section:last-child{

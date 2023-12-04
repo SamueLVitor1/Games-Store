@@ -123,9 +123,10 @@ export const FotterFormContainer = styled.div`
   display: flex;
   align-items: center;
   flex-direction: column; 
-  flex-wrap: wrap;
+
 
   div {
+    align-self: flex-start;
     display: flex;
     gap: 6px;
     flex-wrap: wrap; 
