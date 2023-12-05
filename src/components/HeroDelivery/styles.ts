@@ -8,8 +8,18 @@ export const DeliveyContainer = styled.div`
   margin: 8rem 10rem;
   display: flex;
   gap: 10rem;
+  flex-wrap: wrap;
+  align-items : center;
+  justify-content: center;
+
+  @media screen and (max-width: 650px) {
+    flex-direction: column;
+    margin: 2rem;
+    align-items: center;
+  }
 
   img{
+    max-width: 100%;
     margin-bottom: -7rem;
   }
   
@@ -18,6 +28,10 @@ export const DeliveyContainer = styled.div`
     display: flex;
     flex-direction: column;
     gap: 4rem;
+
+    @media screen and (max-width: 650px) {
+    gap: 2rem;
+  }
 
     header{
 
@@ -45,6 +59,12 @@ export const DeliveyContainer = styled.div`
       padding: 3rem;
       border-radius: 6px 36px;
       border: 1px solid #DBAC2C;
+      min-width: 280px;
+
+      @media screen and (max-width: 650px) {
+        align-items: center;
+        padding: 1.5rem; 
+      }
 
       div{
         max-width: 31rem;
