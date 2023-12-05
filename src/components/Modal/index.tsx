@@ -44,10 +44,7 @@ export function ModalGame({
 
           <main>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim nemo
-              quaerat tenetur non eligendi? Praesentium exercitationem soluta
-              aliquid eaque iste, sapiente consectetur natus repellat.
-              Reiciendis, reprehenderit suscipit? Dolorem, tempora aspernatur.
+             {gameDados && gameDados.text}
             </p>
           </main>
 

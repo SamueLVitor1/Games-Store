@@ -26,7 +26,8 @@ export const gamesSlides = [
     "logo": rdr2LOGO,
     imgFull: rdrFull,
     img: rdr2,
-    id: 10
+    id: 10,
+    text: "Vencedor de mais de 175 prêmios de Jogo do Ano e avaliado com mais de 250 notas máximas, Red Dead Redemption 2 é uma história épica de honra e lealdade no alvorecer dos tempos modernos. Inclui Red Dead Redemption 2: Modo História e Red Dead Online."
   },
   {
     "title": "Elden Ring",
@@ -35,7 +36,8 @@ export const gamesSlides = [
     "logo": eldenLOGO,
     imgFull: eldenFull,
     img: elden,
-    id: 1
+    id: 1,
+    text: "O NOVO RPG DE AÇÃO E FANTASIA. Levante-se, Maculado, e seja guiado pela graça para portar o poder do Anel Prístino e se tornar um Lorde Prístino nas Terras Intermédias."
   },
   {
     "title": "Minecraft",
@@ -44,7 +46,8 @@ export const gamesSlides = [
     "logo": mineLOGO,
     imgFull: minecraftFull,
     img: mine,
-    id: 7
+    id: 7,
+    text: "Explore mundos gerados aleatoriamente e construa das casas mais simples aos maiores castelos. Jogue no modo criativo com recursos ilimitados, ou minere as profundezas do mundo no modo sobrevivência, criando armas e armaduras para se defender das criaturas."
   },
   {
     "title": "Call of Duty MW2",
@@ -53,6 +56,7 @@ export const gamesSlides = [
     "logo": mw2LOGO,
     imgFull: codFull,
     img: cod,
-    id: 2
+    id: 2,
+    text: "Experimente uma Campanha visceral ou monte sua equipe em uma derradeira experiência online com diversos desafios de Operações Especiais e uma mistura de mapas e modos Multijogador."
   }
 ]

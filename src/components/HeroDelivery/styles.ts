@@ -22,7 +22,6 @@ export const DeliveyContainer = styled.div`
     max-width: 100%;
     margin-bottom: -7rem;
   }
-  
 
   section{
     display: flex;
@@ -34,18 +33,20 @@ export const DeliveyContainer = styled.div`
   }
 
     header{
-
       h2{
         font-size: 3.2rem;
         font-weight: 800;
         color: #C47F17;
         margin-bottom: 4px;
+        
       }
-
       p{
        filter: brightness(0.9);
        font-size: 1.8rem;
       }
+      @media screen and (max-width: 650px) {
+        text-align: center;
+        }
     }
 
     main{
@@ -62,7 +63,6 @@ export const DeliveyContainer = styled.div`
       min-width: 280px;
 
       @media screen and (max-width: 650px) {
-        align-items: center;
         padding: 1.5rem; 
       }
 
@@ -71,6 +71,8 @@ export const DeliveyContainer = styled.div`
         display: flex;
         align-items: center;
         gap: 12px;
+
+      
 
         p{
           color: #ccc;

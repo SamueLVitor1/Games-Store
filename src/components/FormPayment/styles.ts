@@ -62,6 +62,7 @@ export const Container = styled.div`
 
     input:-webkit-autofill {
       background: ${props => props.theme["dark-10"]};
+     
     }
 
     input {
@@ -69,6 +70,10 @@ export const Container = styled.div`
       border: 1px solid #475569;
       background: ${props => props.theme["dark-10"]};
       padding: 10px;
+
+      @media screen and (max-width: 450px) {
+      width: 100%;
+      }
 
       &:valid {
         background: ${props => props.theme["dark-10"]};

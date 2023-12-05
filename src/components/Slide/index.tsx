@@ -50,10 +50,7 @@ export const Slide = () => {
               >
                 <img src={item.logo} alt="" />
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Reiciendis unde fuga necessitatibus iste facere doloremque,
-                  ipsa sapiente? Cumque nesciunt odio maxime! Laborum molestias
-                  laudantium inventore maiores vel placeat nam laboriosam?
+                  {item.text}
                 </p>
 
                 <button onClick={()=>{
